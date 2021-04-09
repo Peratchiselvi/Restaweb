@@ -1,0 +1,162 @@
+@import "index.css";
+.navbar a{
+    color: gray;
+}
+body{
+    color: rgb(8, 1, 1);
+}
+#menubar{
+    margin: 25px auto;
+    overflow: auto;
+    width: 60%;
+    padding: 5px 0px 15px 0px;
+    background-color: rgb(245, 223, 31);
+}
+.menu1{
+    width: 80%;
+    margin: auto;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("menuback.jpg");
+    background-attachment: fixed;
+}
+
+.dish{
+    padding-top: 20px;
+    margin: 5px;
+}
+.price{
+    background-color: rgb(245, 223, 31); color: black; padding: 5px; margin-left: 10px;
+}
+/*
+.menu1{
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    background-color: cornsilk;
+}*/
+#menu_list_break,#menu_list_after,#menu_list_dinner{
+    display: none;
+}
+.menu1 .row{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-radius: 25px;
+}
+.col img{
+    border-radius: 25px;
+    height: 150px;
+    transition: .4s ease-in;
+    opacity: 1;
+    width: 90%;
+}
+.col img:hover{
+    opacity: 0.8;
+    height: 175px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.4);
+}
+.row .col{
+    background-color: ivory;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    flex: 40%;
+    border-radius: 25px;
+}
+.navbar .sticky a{
+    color: orangered;
+}
+.sticky + #session{
+    padding-top: 60px;
+  }
+#session{
+    margin-bottom: 15px;
+}
+#session button{
+    background-color: rgb(155, 3, 142);
+    color: thistle;
+    border: none;
+    padding: 10px 25px;
+}
+#session button:hover{
+    box-sizing: border-box;
+    border-bottom: 1px solid  rgb(4, 215, 252);
+}
+@media only screen and (max-width: 800px) {
+    #menubar{
+        width: 100%;
+    }
+    .menu1{
+        width: 95%;
+    }
+    .menu1 .row{
+        flex-direction: row;
+    } 
+}
+@media only screen and (max-width: 550px) {
+    .menu1 .row{
+        flex-direction: column;
+    }
+    .row .col{
+        width: 60vw;
+        margin: 15px auto;
+    }
+}
+/*@import "index.css";
+.navbar a{
+    color: gray;
+}
+body{
+    color: rgb(8, 1, 1);
+}
+#menu_list_break{
+    margin: 25px auto;
+    width: 50%;
+    overflow: auto;
+    background-color: rgb(245, 223, 31);
+}
+.menu1{
+    width: 80%;
+    margin: auto;
+}
+#menu_list_after,#menu_list_dinner{
+    display: none;
+}
+.menu1 .row{
+    background-color: cornsilk;
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.row .col, .row .column{
+    padding: 15px 0px;
+
+}
+.row img{
+    border-radius: 25px;
+    float: left;
+    display: inline;
+}
+.row .col{
+    float: right;
+}
+.menu1 span::after{
+    content: "..................";
+}
+#session button{
+    background-color: rgb(155, 3, 142);
+    color: thistle;
+    border: 1px solid rgb(241, 232, 232);
+    padding: 10px 25px;
+}
+@media only screen and (max-width: 1045px) {
+    #menu_list_break{
+        width: 100%;
+    }
+    .row img{
+        display: block;
+    }
+}*/

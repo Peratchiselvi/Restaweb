@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="reserve.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+      .navbar{
+        background-color: rgba(10,10,10,0.9);
+      }
+    </style>
+<body>
+<div class = "navbar" id="navbar">
+    <a href = "main.html" class="home">Home</a>
+    <div class="navright">
+    <a href = "menu.html" class="navabout">Menus</a>
+    <a href = "reserve.html">Reservation</a>
+    <a href = "myreservation.php">My Reservations</a>
+    <a href="javascript:void(0);" class="icon" onclick="menu()">
+        <i class="fa fa-bars"></i>
+    </a></div>
+</div>
+<div class="reserve">
+<form id="reserveform" method="POST">
+    <div class="row"><div class="title">Persons</div><div class="input">
+        <select name="persons" id="persons"><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+        <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option>
+        <option value="14">14</option><option value="15">15</option><option value="16">16</option></select></div></div>
+    <div class="row"><div class="title">Date</div><div class="input"><input type="date" name="date" min="<?php echo date('Y-m-d');?>" required></div></div>
+    <div class="row"><div class="title">Time</div><div class="input">
+        <select name="time" id="time" onchange="menucheckbox()"><option value="7.30">7:30</option>
+        <option value="8">8:00</option><option value="8.30">8:30</option>
+        <option value="9">9:00</option><option value="9.30">9:30</option><option value="10">10:00</option><option value="10.30">10:30</option><option value="11">11:00</option>
+        <option value="11.30">11:30</option><option value="12">12:00</option><option value="12.30">12:30</option>
+        <option value="13">13:00</option><option value="13.30">13:30</option><option value="14">14:00</option><option value="14.30">14:30</option><option value="15">15:00</option>
+        <option value="15.30">15:30</option><option value="16">16:00</option><option value="16.30">16:30</option><option value="17">17:00</option><option value="17.30">17:30</option><option value="18">18:00</option>
+        <option value="18.30">18:30</option><option value="19">19:00</option><option value="19.30">19:30</option><option value="20">20:00</option><option value="20.30">20:30</option><option value="21">21:00</option>
+        <option value="21.30">21:30</option><option value="22">22:00</option><option value="22.30">22:30</option></select>
+        </div></div>
+        <div class="row"><div class="title">Menu</div><div class="input" id="menucheck">
+        <div id="menucheckdefault"><input type="checkbox" name="item[]" value="Idli">Idli<br><input type="checkbox" name="item[]" value="Dosa">Dosa<br>
+        <input type="checkbox" name="item[]" value="Pongal">Pongal</div>
+        </div></div>
+        <div id="menucheckmorn"><input type="checkbox" name="item[]" value="Idli">Idli<br><input type="checkbox" name="item[]" value="Dosa">Dosa<br>
+        <input type="checkbox" name="item[]" value="Pongal">Pongal</div>
+        <div id="menucheckafter"><input type="checkbox" name="item[]" value="Chicken Briyani">Chicken Briyani<br><input type="checkbox" name="item[]" value="Briyani">Briyani<br>
+        <input type="checkbox" name="item[]" value="Mutton Briyani">Mutton Briyani</div>
+        
+        <div id="menucheckeve"><input type="checkbox" name="item[]" value="Chappathi">Chappathi<br><input type="checkbox" name="item[]" value="Protta">Protta<br>
+        <input type="checkbox" name="item[]" value="Naan">Naan</div>
+          
+        <div class="row"><input type="submit" name="Submit" value="Reserve" id="submitButtonId"></div>
+  
+</form>
+</div>
+
+<script> 
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  $("#submitButtonId").click(function() {
+
+var url = "reserve.php";
+
+$.ajax({
+       type: "POST",
+       url: url,
+       data: $("#reserveform").serialize(), 
+       success: function()
+       {
+           alert("Table is reserved!");
+       }
+     });
+
+return false;
+});
+function menu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+  function menucheckbox(){
+    time = document.getElementById("time").value;
+    if(time == 7.30 || time <= 11.30){    
+      document.getElementById("menucheck").innerHTML = document.getElementById("menucheckmorn").innerHTML;
+    }
+    else if(time == 12 || time <= 17){      
+      document.getElementById("menucheck").innerHTML = document.getElementById("menucheckafter").innerHTML;
+    }
+    else if(time == 17.30 || time <= 22.30){      
+      document.getElementById("menucheck").innerHTML = document.getElementById("menucheckeve").innerHTML;
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import "index.css";
+body{
+  padding: 0px;
+  color: black;
+  margin: 0px;
+}
+.reserve{
+  background-image: url('meetforlap.jpg');
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: static;
+}
+.navbar{
+  margin: 0;
+  display: block;
+}
+.navbar a{  
+  color: floralwhite;
+}
+input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="date"],input[type="time"],select{  
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: none;
+    resize: none;
+}
+#menucheck{
+  margin: 0px;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+#menucheckdefault div{
+  display: inline;
+}
+#menucheckmorn, #menucheckafter, #menucheckeve{
+  display: none;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+.row .input{
+  width: 80%;
+}
+.row div{
+  margin: auto;
+}
+.row .title{
+  width: 100px;
+}
+.signin .row{
+  width: 75%;
+}
+.signin .row .title{
+  width: 150px;
+}
+  input[type=submit] {
+    background-color:rgb(255, 138, 0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+  
+  .signin {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow: auto;
+  }
+  .row div{
+    padding: 5px 0px;
+  }
+  .checkrow{
+    display: flex;
+  }
+#reserveform{
+  display: block;
+  margin: auto;
+  position: static;
+  margin-top: 30px;
+  width: 50%;
+  color: azure;
+  background: linear-gradient( rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9));
+  border-radius: 10px;
+  padding: 15px;
+}
+.login,.signin{
+  color: azure;
+  background: linear-gradient( rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9));
+  width: 50%;
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.login a{
+  color: rgb(255, 138, 0);
+}
+.login a:hover{
+  text-decoration: underline;
+}
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 900px) {
+    .login,#reserveform,.signin,.myreserve{
+      width: 75%;
+    }
+    .row{
+      width: 80%;
+    }
+  }@media screen and (max-width: 600px) {
+    #reserveform{
+      z-index: 0;
+    }
+    .navbar a{
+      color: cornsilk;
+    }
+
+  }@media screen and (max-width: 1100px){
+    .row{
+      width: 80%;
+    }
+  }
+   @media screen and (max-width: 400px){
+     .row{
+       flex-direction: column;
+     }
+     .signin .row .title {
+      width: 100%;
+  }
+     .row .title{
+       width: 100%;
+     }
+     .row .input, input[type="submit"]{
+       width: 100%;
+     }
+     input[type="submit"]{
+       margin-left: 0px;
+     }
+   }
+  

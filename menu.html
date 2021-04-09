@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="menu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function change_to_break(){
+                document.getElementById("menubar").innerHTML = document.getElementById("menu_list_break").innerHTML;
+            }
+            function change_to_lunch(){
+                document.getElementById("menubar").innerHTML = document.getElementById("menu_list_after").innerHTML;
+            }
+            function change_to_dinner(){
+                document.getElementById("menubar").innerHTML = document.getElementById("menu_list_dinner").innerHTML;
+            }
+        </script>
+    </head>
+    <body>
+        <div class = "navbar" id="navbar">
+            <a href = "main.html" class="home">Home</a>
+            <div class="navright">
+            <a href = "menu.html" class="navabout">Menus</a>
+            <a href = "reserve.html">Reservation</a>
+            <a href = "myreservation.php">My Reservation</a>
+            <a href="javascript:void(0);" class="icon" onclick="menu()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        </div>        
+        <div id="session" style="text-align: center;">
+            <h2 style="text-align: center;">Menu</h2>
+        <button onclick="change_to_break()">Breakfast</button>
+        <button onclick="change_to_lunch()">Lunch</button>
+        <button onclick="change_to_dinner()">Dinner</button></div>
+        <div id="menubar">
+            <div id="menu_list">
+            <h2 style="text-align: center;">Breakfast</h2>
+        <div class="menu1">
+            <div class="row">
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div>
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div></div>
+            <div class="row">
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div>
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div></div>
+            <div class="row">
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div>
+            <div class="col">
+                <img class = "column" src="egg.jpg">
+                <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+            </div></div>
+        </div>
+        </div>
+        </div>
+        <div id="menu_list_break">
+        <h2 style="text-align: center;">Breakfast</h2>
+    <div class="menu1">
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="egg.jpg">
+            <span class="dish">Egg Omelet<span class="price">Rs.10</span></span>
+        </div></div>
+    </div>
+    </div>
+    </div>
+        <div id="menu_list_after">
+        <h2 style="text-align: center;">Lunch</h2>
+    <div class="menu1">
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="briyani.jpg">
+            <span class="dish">Vegetable Briyani<span class="price">Rs.50</span></span>
+        </div></div>
+    </div></div> 
+    <div id="menu_list_dinner">
+        <h2 style="text-align: center;">Dinner</h2>
+    <div class="menu1">
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div></div>
+        <div class="row">
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div>
+        <div class="col">
+            <img class = "column" src="chapathi.jpg">
+            <span class="dish">Chapathi<span class="price">Rs.10</span></span>
+        </div></div>
+    </div>
+    </div><script> 
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        if (window.matchMedia("(min-width: 600px)").matches){
+        window.onscroll = function() {myFunction()}; }
+      function menu() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+    </body>
+</html>

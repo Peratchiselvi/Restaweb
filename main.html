@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="main">
+        <div class = "navbar" id="navbar">
+          <a href = "main.html" class="home">Home</a>
+          <div class="navright">
+            <a href = "#about" class="navabout">About</a>
+          <a href = "menu.html">Menus</a>
+          <a href = "reserve.html">Reservation</a>
+          <a href = "myreservation.php">My Reservations</a>
+          <a href="javascript:void(0);" class="icon" onclick="menu()">
+              <i class="fa fa-bars"></i>
+          </a></div></div>
+          <div id="offer">
+        <h4>Reserve now and get FLAT 20% offer.HURRY UP!!!</h4><a href="reserve.html">Reserve NOW!</a></div>
+        
+        </div><!--
+        <h4 style ="position: absolute;top: 50%;left: 15%;color: black; background-color: #ff8a00;padding: 5px 15px;border-radius: 15px; opacity: 0.9;">Reserve Here</h4></div>-->
+        <div id="about">
+          <div class="about_cont"><br><br>
+            <h4 style="color: gray;margin-bottom: 0;">Our Story</h4>
+          <h2>Dining Delicious since 2019</h2>
+          <p style="color: gray;">We had just started our restaurant with tea and coffee only.Now we reached great heights by our honesty 
+            and our customors support.We believe that using fresh and organic ingredients make delicious and healthy food.
+            In addition to that, we are getting ingredients from farmers directly. Our motive is to serve healthy 
+            and tasty food in affordable price. And ofcourse we are doing it great till now and will be...
+          </p></div>
+          <div class="coffee_img"><img src="front.jpg"></div>
+        </div><br>
+        <div class="map">
+          <div class="mapimg"><img src="map2.jpg"></div>
+          <div class="direction"><button>Get Direction</button></div></div><!--
+        <div class="form">
+          <form method="POST" action="new.php">
+            <label>Name :</label><input type="text" name="fname"><br>
+            Mail Id : <input type="email" name="mail"><br>
+            Query : <input type="text" name="comment"><br>
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>-->
+        <div class="contact">
+          <div class="sector">
+            <div class="address">
+            <h4>To meet</h4>
+            <p>Visit 3,North Car Street,<br>
+            Chennai<br>         
+            </div>
+            <div class="opening">
+            <h4>Open Timing</h4>
+            From Monday to Friday<br>
+            Timing: 7AM to 9PM</p> </div>   
+            <div class="call">
+              <h4>To contact</h4>
+              <p>Call 8787900834</p>     
+              </div>
+            </div><br><br>
+            <hr style="margin: auto; width: 45%; opacity: 0.2;">  <br><br>
+            <div class="media">
+                <h4>Follow us on</h4> <i class="fa fa-instagram" aria-hidden="true"></i><i class="fa fa-facebook-official" aria-hidden="true"></i> 
+                <a href="https://t.me/Selvi" style="color: white;"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+             
+            </div>
+        </div>
+    
+<script> 
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  if (window.matchMedia("(min-width: 600px)").matches){
+  window.onscroll = function() {myFunction()}; }
+function menu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+    </body>
+</html>
